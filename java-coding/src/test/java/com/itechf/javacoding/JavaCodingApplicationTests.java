@@ -18,7 +18,7 @@ class JavaCodingApplicationTests {
 	}
 
 	@Test
-	void doReverse() {
+	void checkReverseString() {
 		String actual = basic.reverseString("java");
 		assertThat(actual).isEqualTo("avaj");
 		
@@ -27,5 +27,14 @@ class JavaCodingApplicationTests {
 		
 		actual = basic.reverseString("Deepak");
 		assertThat(actual).isEqualTo("kapeeD");
+	}
+
+	@Test
+	void checkPrimeNo() {
+		assertThat(basic.isPrime(31)).isTrue();
+		assertThat(basic.isPrime(12)).isFalse();
+		assertThat(basic.isPrime(15)).isFalse();
+		assertThat(basic.isPrime(17)).isTrue();
+		assertThat(basic.isPrime(33)).isFalse();
 	}
 }
