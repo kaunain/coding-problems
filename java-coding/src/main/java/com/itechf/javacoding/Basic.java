@@ -9,8 +9,16 @@ import org.springframework.stereotype.Component;
  @Component
 public class Basic {
 
-    public void reverseString(String input) {
+    public String reverseString(String input) {
+        StringBuilder output = new StringBuilder();
+        if(input == null)
+            return output.toString();
+
+        for (int i = input.toCharArray().length -1 ; i >= 0; i--) {
+            output.append(input.toCharArray()[i]);
+        }
         System.out.println(input);
+        return output.toString();
     }
     
 }
