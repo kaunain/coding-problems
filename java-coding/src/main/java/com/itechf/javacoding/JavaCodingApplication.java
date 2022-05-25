@@ -11,6 +11,9 @@ public class JavaCodingApplication implements CommandLineRunner {
 	@Autowired
 	private Basic basic;
 
+	@Autowired
+	private Feature8 f8;
+
 	public static void main(String[] args) {
 		SpringApplication.run(JavaCodingApplication.class, args);
 	}
@@ -21,8 +24,8 @@ public class JavaCodingApplication implements CommandLineRunner {
 		System.out.println("---------------------------------");
 		System.out.println();
 		
-		basic.reverseString("Core Java");
-		
+		// basic.reverseString("Core Java");
+		f8.print();
 		
 		System.out.println();
 		System.out.println("---------------------------------");
