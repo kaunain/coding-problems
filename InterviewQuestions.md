@@ -1,6 +1,7 @@
 # Interview Questions for Java
 
-## TechAhead 24 May 2022
+## Question asked on 24 May 2022
+
 1. Swap two String without taking third variable
 2. Print only Odd no from a list
 3. What is IoC
