@@ -25,8 +25,8 @@ public class JavaCodingApplication implements CommandLineRunner {
 		System.out.println();
 		
 		// basic.reverseString("Core Java");
-		f8.print();
 		
+		f8.print();
 		System.out.println();
 		System.out.println("---------------------------------");
 		System.out.println("Completed");
