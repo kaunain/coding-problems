@@ -3,14 +3,31 @@
 ## Question asked on 24 May 2022 | No 03
 
 1. Swap two String without taking third variable
+   ``` java
+       public void swapTwoString() {
+        String s1 = "Hello7";
+        String s2 = "Java2";
+        System.out.println("Before swap s1 : " + s1 + " | s2 : " + s2);
+        s1 = s1 + s2;
+        s2 = s1.substring(0, s1.length() - s2.length());
+        s1 = s1.substring(s2.length());
+        System.out.println("After swap s1 : " + s1 + " | s2 : " + s2);
+    }
+   ```
 2. Print only Odd no from a list
+   ``` java
+    public void printOddNumber() {
+        List<Integer> intList = List.of(1, 2, 3, 5, 6, 12, 10, 11);
+        intList.stream().filter(i -> i % 2 == 1).forEach(System.out::println);
+    }
+   ```
 3. What is IoC
 4. Bean Life Cycle in spring
 5. What is JJS in java 8
 6. What is Lambda expression
 7. what is method reference
 8. Features of java 8
-9. How to create immutable object in java
+9.  How to create immutable object in java
 10. Advantages of Java 8
 11. What is Optional in Java
 12. What is Functional Interface
