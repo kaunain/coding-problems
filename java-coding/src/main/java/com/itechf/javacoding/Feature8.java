@@ -23,4 +23,9 @@ public class Feature8 {
             System.out.println();
         }
     }
+
+    public void printOddNumber() {
+        List<Integer> intList = List.of(1, 2, 3, 5, 6, 12, 10, 11);
+        intList.stream().filter(i -> i % 2 == 1).forEach(System.out::println);
+    }
 }

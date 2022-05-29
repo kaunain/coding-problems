@@ -43,4 +43,15 @@ public class Basic {
         return output;
     }
     
+    //swap two string variable without using third variable
+    public void swapTwoString() {
+        String s1 = "Hello7";
+        String s2 = "Java2";
+
+        System.out.println("Before swap s1 : " + s1 + " | s2 : " + s2);
+        s1 = s1 + s2;
+        s2 = s1.substring(0, s1.length() - s2.length());
+        s1 = s1.substring(s2.length());
+        System.out.println("After swap s1 : " + s1 + " | s2 : " + s2);
+    }
 }
