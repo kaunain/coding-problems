@@ -54,4 +54,31 @@ public class Basic {
         s1 = s1.substring(s2.length());
         System.out.println("After swap s1 : " + s1 + " | s2 : " + s2);
     }
+
+    public void multipleInheritance() {
+        School sc = new School();
+        sc.print();
+        System.out.println("----");
+        Student st = new School();
+        st.print();
+        System.out.println("----");
+        Teacher te = new School();
+        te.print();
+        System.out.println("----");
+        Teacher te2 = () -> System.out.println("This is use of lambda");
+        te2.print();
+        System.out.println("----");
+        Teacher te3 = System.out::println;
+        te3.print();
+        System.out.println("----");
+        
+    }
+    public void finalVariable() {
+        final String name = "One";
+        System.out.println(name);
+        StringBuffer sb = new StringBuffer("Two");
+        System.out.println(sb);
+        sb.append("Three");
+        System.out.println(sb);
+    }
 }
