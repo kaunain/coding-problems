@@ -2,6 +2,8 @@ package com.itechf.javacoding;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
@@ -9,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Feature8 {
 
-    private List<Integer> intList = List.of(1, 3, 5, 6, 12, 10);
+    private List<Integer> intList = List.of(1, 3, 5, 6, 12, 3, 10);
 
     public void print() {
         // intList.forEach(System.out::println);
@@ -34,11 +36,11 @@ public class Feature8 {
     public void employeeSalaryGraterThan(Integer maxSal) {
 
         List<Employee> empList = List.of(
-            new Employee(1, "Amit", 10000),
-            new Employee(2, "Deepak", 15000),
-            new Employee(3, "Sumit", 17000),
-            new Employee(4, "Abdul", 11000),
-            new Employee(5, "Ram", 11500)
+            new Employee(1, "Amit", "Golu", 10000),
+            new Employee(2, "Deepak", "Golu", 15000),
+            new Employee(3, "Sumit", "Golu", 17000),
+            new Employee(4, "Abdul", "Golu", 11000),
+            new Employee(5, "Ram", "Golu", 11500)
             );
         
         empList.stream().filter(emp -> emp.getSalary() > maxSal).forEach(System.out::println);
@@ -52,5 +54,15 @@ public class Feature8 {
         System.err.println(empMap2);
         Map<Integer, String> empAsMap = empList.stream().collect(Collectors.toMap(e -> e.getId(), e -> e.getName()));
         empAsMap.forEach((k, v) -> System.out.println(k + " | " + v));
+        
+        System.out.println("Max No in List");
+        Employee a = empList.stream().max((o1, o2) -> o1.getId() - o2.getId()).get();
+        System.out.println(a);
+
+        Optional<Integer> mVal =  intList.stream().max((l1, l2) -> l1 - l2);
+        System.out.println(mVal.get());
+
+        Map<Integer, Long> countGroup = intList.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(countGroup);
     }
 }

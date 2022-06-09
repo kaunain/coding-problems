@@ -1,5 +1,9 @@
 package com.itechf.javacoding;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,6 +12,10 @@ import org.springframework.stereotype.Component;
 
  @Component
 public class Basic {
+
+    @Autowired
+    private SerializationDemo serializationDemo;
+
 
     //How to reverse a String in Java?
     public String reverseString(String input) {
@@ -80,5 +88,27 @@ public class Basic {
         System.out.println(sb);
         sb.append("Three");
         System.out.println(sb);
+    }
+
+    public void serialization() {
+        try {
+            serializationDemo.write();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
+    }
+    public void deSerialization() {
+        try {
+            serializationDemo.reader();
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+       
     }
 }
