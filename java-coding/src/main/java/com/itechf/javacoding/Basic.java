@@ -1,6 +1,5 @@
 package com.itechf.javacoding;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -94,7 +93,6 @@ public class Basic {
         try {
             serializationDemo.write();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         
@@ -103,12 +101,73 @@ public class Basic {
         try {
             serializationDemo.reader();
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
        
+    }
+
+    public void customAnnotation() {
+        Employee emp = new Employee();
+        System.out.println(emp);
+        
+    }
+    public void chkPassByVal() {
+        PassByValue pb = new PassByValue("One");
+        System.out.println("1 : " + pb);
+        PassByValue pb2 = new PassByValue("Two");
+        pb.changeReference(pb2);
+        System.out.println("2 : " + pb);
+        PassByValue pb3 = new PassByValue("Three");
+        pb.modifyReference(pb3);
+        System.out.println("3 : " + pb);
+    }
+
+    public void chkPrimitive() {
+        int a = 20;
+        System.out.println(a);
+        short s = 20;
+        System.out.println(s);
+        a = s;
+        System.out.println(a);
+    }
+
+    public void chkWrapper() {
+        int a = 10000;
+        Integer b = null;
+        System.out.println("a : " + a + " | b : " + b);
+        b = a;
+        b = b + a;
+        System.out.println("a : " + a + " | b : " + b);
+    }
+
+    public void multipleInheritanceClass() {
+        new Animal().run();
+    }
+
+    public void chkMyReader() {
+        try ( MyReader mr = new MyReader(); )
+        {
+            mr.read();
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+    }
+
+    public void arrayDemo() {
+        int[] arr = {1,3,2};
+        arr.clone();
+        int l = arr.length;
+    }
+
+    public void superTesting() {
+        Animal animal = new Animal();
+        System.out.println(animal);
+        Animal cow = new Cow(2);
+        System.out.println(cow);
+        Cow pureCow = new Cow(2);
+        System.out.println(pureCow);
+
     }
 }

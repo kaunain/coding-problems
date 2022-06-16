@@ -36,11 +36,11 @@ public class Feature8 {
     public void employeeSalaryGraterThan(Integer maxSal) {
 
         List<Employee> empList = List.of(
-            new Employee(1, "Amit", "Golu", 10000),
-            new Employee(2, "Deepak", "Golu", 15000),
-            new Employee(3, "Sumit", "Golu", 17000),
-            new Employee(4, "Abdul", "Golu", 11000),
-            new Employee(5, "Ram", "Golu", 11500)
+            new Employee(1, "Amit", "Golu", 10000, EmployeeType.CONSULTANT),
+            new Employee(2, "Deepak", "Golu", 15000, EmployeeType.FULL_TIME),
+            new Employee(3, "Sumit", "Golu", 17000, EmployeeType.FULL_TIME),
+            new Employee(4, "Abdul", "Golu", 11000, EmployeeType.PART_TIME),
+            new Employee(5, "Ram", "Golu", 11500, EmployeeType.FULL_TIME)
             );
         
         empList.stream().filter(emp -> emp.getSalary() > maxSal).forEach(System.out::println);

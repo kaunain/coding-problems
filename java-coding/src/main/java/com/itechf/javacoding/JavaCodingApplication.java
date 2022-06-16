@@ -24,7 +24,9 @@ public class JavaCodingApplication implements CommandLineRunner {
 		System.out.println("---------------------------------");
 		System.out.println();
 		
-		f8.employeeSalaryGraterThan(1000);
+		basic.serialization();
+		
+		basic.deSerialization();
 		System.out.println();
 		System.out.println("---------------------------------");
 		System.out.println("Completed");

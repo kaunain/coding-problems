@@ -1,5 +1,6 @@
 package com.itechf.javacoding;
 
+
 public class School implements Student, Teacher  {
 
     @Override
