@@ -21,8 +21,8 @@ public class JavaCodingApplication implements CommandLineRunner {
 		System.out.println("---------------------------------");
 		System.out.println();
 		
-		f11.problem1();
-		
+		f11.run();
+
 		System.out.println();
 		System.out.println("---------------------------------");
 		System.out.println("Completed");
