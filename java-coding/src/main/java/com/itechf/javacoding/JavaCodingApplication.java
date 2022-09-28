@@ -9,10 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JavaCodingApplication implements CommandLineRunner {
 
 	@Autowired
-	private Basic basic;
-
-	@Autowired
-	private Feature8 f8;
+	private Feature11 f11;
 
 	public static void main(String[] args) {
 		SpringApplication.run(JavaCodingApplication.class, args);
@@ -24,9 +21,8 @@ public class JavaCodingApplication implements CommandLineRunner {
 		System.out.println("---------------------------------");
 		System.out.println();
 		
-		basic.serialization();
+		f11.problem1();
 		
-		basic.deSerialization();
 		System.out.println();
 		System.out.println("---------------------------------");
 		System.out.println("Completed");
